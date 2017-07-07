@@ -1,24 +1,44 @@
-# README
+# _Bon Appétizers site_
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### _An app to display info for catering site with permissions, 07.07.2017_
 
-Things you may want to cover:
+#### By _**E. Baharie**_
 
-* Ruby version
+## Description
 
-* System dependencies
+_The idea for this project is to make site to view the offerings of a company with all appropriate permissions for non-members, basic-members, and admin-users. The prospective customers would like to be able have people view the products on offer while only allowing signed up members to review their products while only admins can make new product entries._
 
-* Configuration
+## Setup/Installation Requirements
 
-* Database creation
+* _This is a great place_
+* _to list setup instructions_
+* _in a simple_
+* _easy-to-understand_
+* _format_
 
-* Database initialization
+## Site Plan
 
-* How to run the test suite
+* _Create new project with bootstrap gems for professional styling_
+* _Create postgres database for devise user authentication, products, and reviews_
+* _Setup devise user registration_
+* _Login and signup access from home page_
+* _Limit access to CRUD cycle for product_
+* _Limit access to CRUD cycle for review
 
-* Services (job queues, cache servers, search engines, etc.)
+## Known Bugs
 
-* Deployment instructions
+_Probably a few_
 
-* ...
+## Support and contact details
+
+_E. Baharie email: 0elan1@gmail.com github: https://github.com/elan0baharie/week2.git _
+
+## Technologies Used
+
+_Ruby, Rails, Bootstrap, Postgres_
+
+### License
+
+*MIT License*
+
+Copyright (c) 2016 **_E. Baharie_**
