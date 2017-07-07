@@ -1,0 +1,24 @@
+<%= render "layouts/errors", :object => @product %>
+
+<%= form_for @product do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+  <div class="form-group">
+    <%= f.label :cost %>
+    <%= f.number_field :cost, :step => 0.01, :min => 0 %>
+  </div>
+  <div class="form-group">
+    <%= f.label :country %>
+    <%= f.text_field :country %>
+  </div>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

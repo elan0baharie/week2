@@ -1,2 +1,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.welcome-background {
+  min-height: 300px;
+  min-width: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("1542.jpg");
+}
+
+.text-welcome {
+  margin-top: 40px;
+  text-align: center;
+  display: inline;
+
+}

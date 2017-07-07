@@ -1,0 +1,61 @@
+<h2>Products Index</h2>
+
+<% if current_user && current_user.admin %>
+  <h4>Products to see</h4>
+  <% if @products.any? %>
+    <% @products.each do|prod| %>
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h4><%= link_to prod.name, product_path(prod)%> <h5>$<%= prod.cost %></h5></h4>
+        </div>
+        <div class="panel-body">
+          <p>
+            <%= prod.description %>
+          </p>
+          <p>
+            Origin: <%= prod.country %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  <%= link_to "Add a new Product", new_product_path %>
+<% elsif current_user %>
+  <h4>Products to see</h4>
+  <% if @products.any? %>
+    <% @products.each do|prod| %>
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h4><%= link_to prod.name, product_path(prod)%> <h5>$<%= prod.cost %></h5></h4>
+        </div>
+        <div class="panel-body">
+          <p>
+            <%= prod.description %>
+          </p>
+          <p>
+            Origin: <%= prod.country %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+<% else %>
+<h4>Products to see</h4>
+  <% if @products.any? %>
+    <% @products.each do|prod| %>
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h4><%= link_to prod.name, product_path(prod)%> <h5>$<%= prod.cost %></h5></h4>
+        </div>
+        <div class="panel-body">
+          <p>
+            <%= prod.description %>
+          </p>
+          <p>
+            Origin: <%= prod.country %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
