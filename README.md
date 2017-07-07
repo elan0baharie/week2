@@ -1,6 +1,6 @@
-# _Bon Appétizers site_
+# _Son of Cod Seafood site_
 
-#### _An app to display info for catering site with permissions, 07.07.2017_
+#### _An app to display info for a food site with permissions, 07.07.2017_
 
 #### By _**E. Baharie**_
 
@@ -23,7 +23,7 @@ _The idea for this project is to make site to view the offerings of a company wi
 * _Setup devise user registration_
 * _Login and signup access from home page_
 * _Limit access to CRUD cycle for product_
-* _Limit access to CRUD cycle for review
+* _Limit access to CRUD cycle for review_
 
 ## Known Bugs
 

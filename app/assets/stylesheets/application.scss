@@ -1,17 +1,51 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Zilla+Slab);
+@import url(https://fonts.googleapis.com/css?family=Cookie);
+
+$zilla-slab: 'Zilla Slab', serif;
+$cookie: 'Cookie', cursive;
 
 .welcome-background {
-  min-height: 300px;
-  min-width: 300px;
+  min-height: 200px;
+  min-width: 500px;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("1542.jpg");
+  background-image: url("welcome.jpg");
+  border-radius: 5px;
+  border: 2px solid black;
+  margin-bottom: 10px;
 }
 
 .text-welcome {
-  margin-top: 40px;
-  text-align: center;
-  display: inline;
+  h4 {
+    padding-top: .5em;
+    text-align: center;
+    font-family: $zilla-slab;
+    font-size: 4.5em;
+    color: white;
+    text-shadow:
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+  }
+  p {
+      font-family: $cookie;
+      font-size: 2em;
+      color: white;
+      text-align: center;
+      text-shadow:
+       -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+         1px 1px 0 #000;
+  }
+}
 
+.well {
+  h2 {
+    text-align: center;
+  }
 }
