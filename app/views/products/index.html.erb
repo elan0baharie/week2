@@ -3,59 +3,37 @@
 <% if current_user && current_user.admin %>
   <h4>Products to see</h4>
   <% if @products.any? %>
-    <% @products.each do|prod| %>
-      <div class="panel panel-info">
-        <div class="panel-heading">
-          <h4><%= link_to prod.name, product_path(prod)%> <h5>$<%= prod.cost %></h5></h4>
-        </div>
-        <div class="panel-body">
-          <p>
-            <%= prod.description %>
-          </p>
-          <p>
-            Origin: <%= prod.country %>
-          </p>
-        </div>
-      </div>
-    <% end %>
+    <ul>
+      <% @products.each do|prod| %>
+        <li><%= link_to prod.name, product_path(prod)%> -- $<%= prod.cost %></h4></li>
+      <% end %>
+    </ul>
   <% end %>
   <%= link_to "Add a new Product", new_product_path %>
 <% elsif current_user %>
-  <h4>Products to see</h4>
+  <h4>Products:</h4>
+  <h5>If you would like to review any of our products just click it.</h5>
   <% if @products.any? %>
+  <ul>
     <% @products.each do|prod| %>
-      <div class="panel panel-info">
-        <div class="panel-heading">
-          <h4><%= link_to prod.name, product_path(prod)%> <h5>$<%= prod.cost %></h5></h4>
-        </div>
-        <div class="panel-body">
-          <p>
-            <%= prod.description %>
-          </p>
-          <p>
-            Origin: <%= prod.country %>
-          </p>
-        </div>
-      </div>
+      <li><%= link_to prod.name, product_path(prod)%> / $<%= prod.cost %></h4></li>
+      <% if prod.reviews.any? %>
+        <ul>
+          <% prod.reviews.each do |rev| %>
+            <li><%= rev.content %></li>
+          <% end %>
+        </ul>
+      <% end %>
     <% end %>
+  </ul>
   <% end %>
 <% else %>
 <h4>Products to see</h4>
   <% if @products.any? %>
-    <% @products.each do|prod| %>
-      <div class="panel panel-info">
-        <div class="panel-heading">
-          <h4><%= link_to prod.name, product_path(prod)%> <h5>$<%= prod.cost %></h5></h4>
-        </div>
-        <div class="panel-body">
-          <p>
-            <%= prod.description %>
-          </p>
-          <p>
-            Origin: <%= prod.country %>
-          </p>
-        </div>
-      </div>
-    <% end %>
+    <ul>
+      <% @products.each do|prod| %>
+        <li><%= link_to prod.name, product_path(prod)%> - $<%= prod.cost %></h4></li>
+      <% end %>
+    </ul>
   <% end %>
 <% end %>
