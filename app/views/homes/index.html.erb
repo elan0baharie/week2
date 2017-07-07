@@ -8,8 +8,13 @@
     </div>
   </div>
   <% else %>
+    <%= current_user.email %>
+    <%= current_user.id %>
     <h3>You logged in!</h3>
+    <%= link_to "Users", users_path, method: :delete %>
   <% end %>
 <div class="well">
   <h2>Welcome times</h2>
+
+
 </div>
