@@ -1,3 +1,22 @@
-<h3>Information about <%= @product.name %></h3>
+<div class="panel panel-info">
+  <div class="panel-heading panel-default">
+    <h3>Detail: <%= @product.name %><h4>$ <%= @product.cost %></h4></h3>
+  </div>
+  <div class="panel-body">
+    <p>
+      <%= @product.description %>
+    </p>
+    <hr>
+    <p>
+      Origin: <%= @product.country %>
+    </p>
 
-<%= render "reviews/new" %>
+  </div>
+</div>
+
+
+
+
+<% if current_user && !current_user.admin %>
+  <%= render "reviews/new" %>
+<% end %>
