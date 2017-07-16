@@ -10,13 +10,22 @@
     <p>
       Origin: <%= @product.country %>
     </p>
-
   </div>
 </div>
-
-
-
-
 <% if current_user && !current_user.admin %>
   <%= render "reviews/new" %>
+<% end %>
+<% if @product.reviews.any? %>
+  <h4>Reviews</h4>
+  <hr>
+  <ul>
+    <% @product.reviews.each do |review| %>
+      <li class="well"><%= review.content %>
+        <br>
+        Rating: <%= review.rating %> - <%= review.author %></li>
+    <% end %>
+  </ul>
+
+<% else %>
+  <h4>No reviews for this product yet.</h4>
 <% end %>

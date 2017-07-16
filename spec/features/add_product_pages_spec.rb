@@ -34,7 +34,13 @@ describe "the add process for a product" do
     expect(page).to have_content 'Lobster'
   end
 
+  it "will log an admin using factory girl" do
+    user = FactoryGirl.create(:user)
+    user.admin?.should eq true
+  end
 
-
-
+  it "will test for adding a product with factory girl" do
+    product = FactoryGirl.create(:product)
+    expect(product.name).to eq "Nameness"
+  end
 end
