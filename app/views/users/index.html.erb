@@ -10,22 +10,30 @@
 <div class="well">
 
   <h2>The finest seafood.</h2>
+
   <p>
-    At Son of Cod we always strive to provide our customers with the freshest seafood possible. We have developed relationships with family fisheries for generations. The most demanding chef's and hoteliers praise our services and products, especially the rapidity with which we can make an unusual request happen. Click the link to see what we have on offer today.</p>
-  <%= link_to "Products", products_path %>
+
+    At Son of Cod we always strive to provide our customers with the freshest seafood possible. We have developed relationships with family fisheries for generations. The most demanding chef's and hoteliers praise our services and products, especially the rapidity with which we can make an unusual request happen. Click the link to see what we have on offer today.
+  </p>
+  <div class="letter-highlight">
+    <%= link_to "Products", products_path %>
+  </div>
 </div>
 
 <% if @products.any? %>
   <div class="well">
     <h5>Specials this week:</h5>
     <%= image_tag("1542.jpg", id: "familypic") %>
-    <p>
-      Super cheap. Make a delicious seafood stew!
-    </p>
-    <% @products.cheapest.each do |prod| %>
-      <p>
-        <%= prod.name %> / $<%= prod.cost %>
-      </p>
-    <% end %>
+    <div class="sale-highlight">
+      <h5>
+        Super cheap. Make a delicious seafood stew!
+      </h5>
+      <% @products.cheapest.each do |prod| %>
+        <p>
+          <%= prod.name %> / $<%= prod.cost %>
+        </p>
+      <% end %>
+    </div>
+
   </div>
 <% end %>
