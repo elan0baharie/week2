@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   def index
     @reviews = Review.all
     @products = Product.all
+    
     render :index
   end
 

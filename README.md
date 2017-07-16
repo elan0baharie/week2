@@ -10,11 +10,13 @@ _The idea for this project is to make site to view the offerings of a company wi
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* _Use a CLI to - git clone https://github.com/elan0baharie/went-to-bali-mwahaha to desktop_
+* _cd into /went-to-bali-mwahaha_
+* _Run bundle install_
+* _Run rails db:create db:migrate db:test:prepare_
+* _Run rails db:seed and enjoy the Chuck Norris reviews_
+* _Run rails s_
+* _From the browser localhost:3000_
 
 ## Site Plan
 
@@ -24,6 +26,7 @@ _The idea for this project is to make site to view the offerings of a company wi
 * _Login and signup access from home page_
 * _Limit access to CRUD cycle for product_
 * _Limit access to CRUD cycle for review_
+* _Add tests_
 
 ## Known Bugs
 

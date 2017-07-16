@@ -45,7 +45,19 @@ $cookie: 'Cookie', cursive;
 }
 
 .well {
+  overflow: hidden;
   h2 {
     text-align: center;
+    height: auto;
+
+
   }
+}
+
+#familypic {
+  float: right;
+  clear: bottom;
+  height: 20em;
+  border: 1px solid black;
+  border-radius: 3px;
 }

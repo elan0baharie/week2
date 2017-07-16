@@ -43,4 +43,16 @@ describe "the add process for a product" do
     product = FactoryGirl.create(:product)
     expect(product.name).to eq "Nameness"
   end
+
+  it "will test the view an admin sees" do
+    user = FactoryGirl.create(:user)
+    product = FactoryGirl.create(:product)
+    visit users_path
+    click_link "Login"
+    fill_in 'Email', :with => "creeper@creeper.com"
+    fill_in 'Password', :with => "easytoremember"
+    click_button 'Log in'
+    click_on 'Products'
+    expect(page).to have_content 'Edit'
+  end
 end
