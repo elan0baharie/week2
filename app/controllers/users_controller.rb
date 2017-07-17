@@ -5,7 +5,6 @@ class UsersController < ApplicationController
   end
 
   def show
-
     render :show
   end
 
@@ -25,15 +24,29 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = current_user
+  end
+
+  def update
+    @user = current_user
+    if @user.update(user_params)
+      flash[:update_success] = "Success!"
+      redirect_to "/"
+    else
+      flash[:update_error] = "User update did not work."
+      redirect_to "/"
+    end
+  end
+
   def destroy
     @users = User.all
-
     render :index
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:email, :password, :password_confirmation, :avatar)
   end
 end
